@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    username: root
+    password: 1
+    url: jdbc:mysql:/127.0.0.1:3306/bk
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8080
+
+
+mybatis-plus:
+  type-aliases-package: com.bk.entity
+  mapper-locations: "classpath*:/mapper/**/*.xml"
+
+  global-config:
+    db-config:
+      id-type: auto
+      # update while the attribute is not null.
+      update-strategy: not_null
+
+sav:
+  root: /home/lx/Documents/tmp/xm/
